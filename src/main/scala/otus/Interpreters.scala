@@ -3,10 +3,8 @@ package otus
 import cats.effect.IO
 
 object Interpreters {
-  implicit val consoleIO: Console[IO] = new Console[IO] {
-    def readLine: IO[Path] = IO.readLine
-    def printLine(line: Path): IO[Unit] = IO.delay(println(line))
-  }
+
+  // todo: console
 
   implicit val fileSystemIO: FileSystem[IO] = new FileSystem[IO] {
     def readFile(path: Path): IO[Path] =

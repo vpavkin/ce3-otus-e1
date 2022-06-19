@@ -1,12 +1,6 @@
 package otus
 
-trait Console[F[_]] {
-  def printLine(line: String): F[Unit]
-  def readLine: F[String]
-}
-object Console {
-  def apply[F[_]: Console]: Console[F] = implicitly
-}
+// todo: console
 
 trait FileSystem[F[_]] {
   def readFile(path: Path): F[String]

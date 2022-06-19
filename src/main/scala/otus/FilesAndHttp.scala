@@ -4,7 +4,7 @@ import cats.effect.{IO, IOApp}
 
 object FilesAndHttp extends IOApp.Simple {
 
-  def program[F[_]: Console: FileSystem: HTTPClient]: F[Unit] = ???
+  def program[F[_]]: F[Unit] = ???
 
   def run: IO[Unit] = {
     import Interpreters._
